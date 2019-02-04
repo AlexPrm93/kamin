@@ -1,0 +1,117 @@
+@import url(fonts.less);
+@import url(grid.less);
+
+html, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    height: 100%;
+    background-color: #1f1f21;
+}
+h1, h2, h3, h4, h5, h6, {
+    color: #767676;
+    font-family: "Tahoma";
+    text-transform: uppercase;
+    margin: 0;
+    padding: 0;
+}
+ul, li, span, div, a, p {
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+    list-style: none;
+    text-decoration: none;
+    color: #767676;
+    font-family: 'HelveticaNeueCyrThin';
+    text-transform: uppercase;
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding-top: 120px;
+}
+main {
+    flex: 1 0 auto;
+}
+footer {
+    flex: 0 0 auto;
+}
+section {
+    padding: 100px 0;
+    background-color: #212123;
+}
+section:nth-of-type(even) {
+    background-color: #1f1f21;
+}
+.btn {
+    display: inline-block;
+    padding: 12px 50px;
+    color: #c6b38c;
+    border: 1px solid #c6b38c;
+    position: relative;
+    outline: none;
+    &:after,
+    &:before {
+        content: '';
+        position: absolute;
+        width: 20px;
+        height: 1px;
+        background-color: #c6b38c;
+        transition: all 0.4s ease;
+    }
+    &:after {
+        left: -10px;
+        top: 50%;
+    }
+    &:before {
+        right: -10px;
+        top: 25%;
+    }
+    &:hover:before,
+    &:hover:after {
+        transform: rotate(90deg);
+    }
+}
+
+.show() {
+    opacity: 1;
+    visibility: visible;
+}
+.hide() {
+    opacity: 0;
+    visibility: hidden
+}
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    .hide();
+    transition: opacity 0.7s linear;
+    z-index: 20;
+
+    &.active {
+    .show();
+    transition: opacity 0.7s linear;
+    position: static;
+    z-index: 21;
+    }
+}
+.white {
+    color: white;
+}
+
+@import url(header.less);
+@import url(main-section.less);
+@import url(our-services.less);
+@import url(more-info.less);
+@import url(footer.less);
+@import url(features.less);
+@import url(media.less);
+@import url(animation.less);

@@ -1,0 +1,155 @@
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #212123;
+    padding: 25px 0px;
+    z-index: 100;
+    .row {
+        align-items: center;
+    }
+    .logo {
+        margin-right: 90px;
+        img {
+            height: 65px;
+        }
+    }
+    .menu {
+        flex-grow: 1;
+        ul {
+            li {
+                padding: 0 15px;
+                display: inline-block;
+                a {
+                    transition: all 0.4s ease;
+                    &.active {
+                        color: #c5b388;
+                        border-bottom: 2px solid #c5b388;
+                    }
+                    &:hover {
+                        color: #c5b388;
+                        transition: all 0.4s ease;
+                    }
+                }
+            }
+        }
+    }
+    .right-menu {
+        flex-grow: 0;
+        ul {
+            display: flex;
+            li {
+                display: flex;
+                align-items: center;
+                flex-direction: row;
+                position: relative;
+                padding: 0 15px;
+                &:hover {
+                  transition: all 0.4s ease;
+                  a {
+                    color: #ae4435;
+                  }
+                  .lnr {
+                      color: #ae4435;
+                      transition: all 0.4s ease;
+                  }
+                }
+                &.account.active {
+                  transition: all 1s ease;
+                  &:hover {
+                    transition: all 1s ease;
+                    background-color: #ae4435;
+                    a {
+                      color:#272729;
+                      font-weight: bold;
+                      transition: all 1s ease;
+                    }
+                  }
+                }
+                &.search-box {
+                  position: relative;
+                  margin: auto;
+                  .search {
+                    position: absolute;
+                    top: 0;
+                    bottom: 0;
+                    left: 5px;
+                    z-index: 4;
+                    &:hover {
+                      cursor: pointer;
+                    }
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        margin: auto;
+                        top: 13px;
+                        right: 0;
+                        bottom: 0;
+                        left: 11px;
+                        width: 9px;
+                        height: 2px;
+                        background: #767676;
+                        transform: rotate(45deg);
+                        transition: all .5s;
+                    }
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        margin: auto;
+                        top: -5px;
+                        right: 0;
+                        bottom: 0;
+                        left: 0px;
+                        width: 11px;
+                        height: 11px;
+                        border-radius: 50%;
+                        border: 2px solid #767676;
+                        transition: all .5s;
+                    }
+                  }
+                }
+                input {
+                    -webkit-appearance: none;
+                    margin: 0;
+                    width: 75px;
+                    background-color: transparent;
+                    border: none;
+                    outline: none;
+                    border-radius: 0;
+                    line-height: 100%;
+                    font-size: 18px;
+                    transition: all 0.4s ease;
+                    text-decoration: none;
+                    color: #767676;
+                    font-family: 'HelveticaNeueCyrThin';
+                    text-transform: uppercase;
+                    cursor: text;
+                    padding: 13px 15px;
+                    &:focus {
+                        width: 150px;
+                    }
+                }
+                a {
+                    transition: all 0.4s ease;
+                    padding: 13px 15px;
+                    // .lnr {
+                    //     margin-right: 7px;
+                    // }
+                }
+                &.active {
+                    background-color: #272729;
+                    a {
+                       color: #ae4435;
+                    }
+                    .lnr {
+                        color: #ae4435;
+                    }
+                }
+            }
+        }
+        .lnr-menu {
+            display: none;
+        }
+    }
+}

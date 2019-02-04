@@ -1,0 +1,97 @@
+.progress-bar {
+    width: 100%;
+    display: table;
+    .progress {
+        vertical-align: middle;
+        display: table-cell;
+        width: 100%;
+        .bar {
+            width: 100%;
+            background-color: #c6b38c;
+            height: 1px;
+            position: relative;
+            .active-bar {
+                border-radius: 10px;
+                position: absolute;
+                left: 0;
+                top: 0;
+                bottom: 0;
+                background-color: #ae4435;
+            }
+        }
+    }
+    .value {
+        padding-left: 10px;
+        width: 1%;
+    }
+}
+.slider-container {
+    position: relative;
+    overflow: hidden;
+}
+.slider-container .arrow-prev,
+.slider-container .arrow-next {
+    position: absolute;
+    top: 50%;
+    font-size: 22px;
+    color: #c5b388;
+    z-index: 1;
+    font-weight: bold;
+    cursor: pointer;
+    transform: translateY(-50%);
+}
+.arrow-prev {
+    left: 0;
+}
+.arrow-next {
+    right: 0;
+}
+
+.modal-container {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.9);
+    .hide();
+    transition: all 0.4s linear;
+    z-index: 5;
+    &.active {
+        .show();
+    }
+    .modal {
+        transition: all 0.3s ease;
+        border-radius: 3px;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%) scale(1.3);
+        top: 70px;
+        .hide();
+        &.active {
+            transform: translateX(-50%) scale(1);
+            .show();
+        }
+        .mobile-menu {
+            padding: 50px 0;
+            text-align: center;
+            li {
+                padding: 15px 0;
+                display: block;
+                a.active {
+                    border-bottom: 2px solid #c5b388;
+                }
+            }
+        }
+    }
+    .close-btn .lnr {
+        cursor: pointer;
+        position: absolute;
+        top: 47px;
+        right: 22px;
+        padding: 10px;
+        border-radius: 2px;
+        font-size: 30px;
+        color: wheat;
+    }
+}

@@ -1,0 +1,332 @@
+@media (max-width: 1500px) {
+    header {
+        .logo {
+            margin-right: 40px;
+        }
+        .right-menu {
+            ul {
+                display: flex;
+                align-items: center;
+                li {
+                  &.search-box {
+                    input {
+                      font-family: 'Inconsolata', monospace;
+                      position: absolute;
+                      margin: auto;
+                      top: 0;
+                      right: 0;
+                      bottom: 0;
+                      width: 50px;
+                      height: 50px;
+                      outline: none;
+                      border: none;
+                      background: #272729;
+                      color: white;
+                      padding: 0 30px 0 10px;
+                      transition: all 1s;
+                      opacity: 0;
+                      z-index: 5;
+                      font-weight: bolder;
+                      letter-spacing: 0.1em;
+                      &:hover {
+                        cursor: pointer;
+                      }
+                      &:focus {
+                        width: 150px;
+                        opacity: 1;
+                        cursor: text;
+                      }
+                      &:focus ~ .search {
+                        right: 0px;
+                        background: #151515;
+                        z-index: 6;
+                        &::before {
+                          top: 0;
+                          left: 0;
+                          width: 25px;
+                        }
+                        &::after {
+                          top: 0;
+                          left: 0;
+                          width: 25px;
+                          height: 2px;
+                          border: none;
+                          background: #767676;
+                          border-radius: 0%;
+                          transform: rotate(-45deg);
+                        }
+                      }
+                      &::placeholder {
+                        color: white;
+                        opacity: 0.5;
+                        font-weight: bolder;
+                      }
+                    }
+                  }
+                  span {
+                      margin-right: 0px;
+                      cursor: pointer;
+                      &.lnr.lnr-cart {
+                          font-size: 21px;
+                      }
+                  }
+                  a {
+                      display: none;
+                  }
+                  &.account {
+                      display: none;
+                  }
+                }
+              }
+            }
+        .mobile-menu {
+            .menu {
+                display: none;
+            }
+            .right-menu ul {
+                display: block;
+            }
+        }
+        .container-header {
+            padding: 0 15px;
+        }
+        .modal-container {
+            .modal {
+                .right-menu {
+                    ul {
+                        li {
+                            a {
+                                display: block;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media(max-width: 1250px) {
+
+    .main-slider .info-block .title h1 {
+        font-size: 45px;
+    }
+}
+@media (max-width: 992px) {
+    header {
+        padding: 10px 0;
+        .logo {
+            img {
+                height: 50px;
+            }
+        }
+        .menu {
+            ul {
+                li {
+                    padding: 0 10px;
+                    a {
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+        .right-menu {
+            ul {
+                li {
+                    input {
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+    }
+    .wrapper {
+        padding-top: 74px;
+    }
+    section {
+        padding: 40px 0;
+    }
+}
+@media(max-width: 900px) {
+
+    footer {
+        .row {
+             .left {
+                display: flex;
+                align-items: center;
+                margin-bottom: 30px;
+                .logo {
+                    margin-bottom: 0px;
+                    width: 20%;
+                    margin-right: 40px;
+                }
+                .text {
+                    width: 80%;
+                }
+            }
+            .right {
+                text-align: center;
+            }
+        }
+    }
+    header {
+        .right-menu {
+            ul {
+                li {
+                    &.search-box {
+                        input {
+                            &:focus {
+                                width: 105px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .main-slider {
+        .info-block {
+            .slide-control {
+                max-width: 400px;
+                margin: 0 auto;
+            }
+        }
+    }
+}
+
+@media(max-width: 800px) {
+    header {
+        .right-menu {
+            .lnr-menu {
+                display: inline-block;
+                font-size: 25px;
+                padding: 0px;
+                color: white;
+            }
+            ul {
+                li {
+                    &.search-box {
+                        input {
+                            &:focus {
+                                width: 150px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .menu {
+            ul {
+                display: none;
+            }
+        }
+        .mobile-menu {
+            .menu {
+                display: block;
+                ul {
+                    display: block;
+                }
+            }
+            .right-menu {
+                ul {
+                    li {
+                        a {
+                            padding: 0px 15px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .our-services {
+        .title {
+            h2 {
+                font-size: 40px;
+            }
+        }
+    }
+    .more-info {
+        .title {
+            h2 {
+                font-size: 40px;
+            }
+        }
+    }
+    .main-slider {
+        .info-block {
+            .title {
+                h1 {
+                    font-size: 38px;
+                }
+            }
+            .slide-control {
+                max-width: 300px;
+            }
+        }
+        .slider-counter {
+            padding: 20px 20px;
+            flex-wrap: wrap;
+            flex-direction: column;
+            .social {
+                margin-left: 0px;
+            }
+            .number {
+                margin-bottom: 10px;
+            }
+        }
+    }
+    .btn {
+        padding: 8px 25px;
+    }
+}
+@media(max-width: 600px) {
+    .main-slider {
+        .right {
+            padding: 50px 30px;
+        }
+    }
+    footer {
+        padding: 40px 0;
+        .row {
+            .left {
+                flex-direction: column;
+                .logo {
+                    width: auto;
+                    margin-right: 0px;
+                    margin-bottom: 20px;
+                }
+                .text {
+                    width: 100%;
+                    text-align: center;
+                }
+            }
+        }
+        .flexbox {
+            .white {
+                width: 50%;
+                font-size: 12px;
+            }
+            // .social {
+            //     .fa {
+            //         font-size: 14px;
+            //     }
+            // }
+        }
+    }
+}
+@media(max-width: 320px) {
+    header {
+        .right-menu {
+            ul {
+                li {
+                    &.search-box {
+                        input {
+                            &:focus {
+                                width: 115px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
